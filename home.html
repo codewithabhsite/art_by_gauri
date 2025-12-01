@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Gauri - Charcoal Portraits & Art Classes</title>
+    <meta name="description"
+        content="Custom charcoal portraits and art classes by Gauri, a professional charcoal artist and teacher from Shahjahanpur, India.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cream: '#F5E6D3',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-zinc-900 text-gray-100">
+
+    <!-- Header -->
+    <header class="bg-black/50 backdrop-blur-md fixed w-full z-50 border-b border-zinc-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="home.html" class="text-2xl font-display font-bold text-cream">Art by Gauri</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-cream hover:text-gold transition">Home</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-gold transition">Portfolio</a>
+                    <a href="services.html" class="text-gray-300 hover:text-gold transition">Services</a>
+                    <a href="classes.html" class="text-gray-300 hover:text-gold transition">Classes</a>
+                    <a href="about.html" class="text-gray-300 hover:text-gold transition">About</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="booking.html"
+                        class="px-4 py-2 bg-gold text-black font-medium rounded-lg hover:bg-gold/90 transition">Book
+                        Portrait</a>
+                    <a href="classes.html"
+                        class="px-4 py-2 border border-cream text-cream font-medium rounded-lg hover:bg-cream/10 transition">Join
+                        a Class</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-cream">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-zinc-800">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="home.html" class="block px-3 py-2 text-cream hover:bg-zinc-800 rounded">Home</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Portfolio</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Services</a>
+                <a href="classes.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Classes</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Contact</a>
+                <div class="pt-4 space-y-2">
+                    <a href="booking.html"
+                        class="block px-3 py-2 bg-gold text-black text-center font-medium rounded-lg">Book Portrait</a>
+                    <a href="classes.html"
+                        class="block px-3 py-2 border border-cream text-cream text-center font-medium rounded-lg">Join a
+                        Class</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-black opacity-90"></div>
+        <div class="absolute inset-0"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.02\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-cream mb-6">
+                    Charcoal Portraits & Art Classes by Gauri
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+                    Professional charcoal artist and dedicated art teacher from Shahjahanpur, India
+                </p>
+                <p class="text-sm text-gray-400 mb-8">
+                    BCA Student at S.S. College • 2+ Years Charcoal Art Experience
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="portfolio.html"
+                        class="px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition transform hover:scale-105">
+                        View Portfolio
+                    </a>
+                    <a href="booking.html"
+                        class="px-8 py-3 border-2 border-cream text-cream font-semibold rounded-lg hover:bg-cream/10 transition">
+                        Book a Portrait
+                    </a>
+                    <a href="classes.html"
+                        class="px-8 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold/10 transition">
+                        Join a Class
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip / Stats -->
+    <section class="py-16 bg-black/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stat 1 -->
+                <div
+                    class="text-center p-6 bg-zinc-800/50 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-3">🎨</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">2+ Years Experience</h3>
+                    <p class="text-gray-400">Dedicated to mastering charcoal art techniques</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div
+                    class="text-center p-6 bg-zinc-800/50 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-3">👥</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Custom Portraits</h3>
+                    <p class="text-gray-400">For individuals, couples, and families</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                    class="text-center p-6 bg-zinc-800/50 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-3">📚</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Art Classes</h3>
+                    <p class="text-gray-400">For students and beginners, online & offline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artworks -->
+    <section class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        </div>
+
+        <!-- Artwork Card 3 -->
+        <div
+            class="group relative bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300">
+            <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                    <span class="text-6xl">🖼️</span>
+                </div>
+                <div class="absolute top-3 right-3">
+                    <span class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-cream mb-1">Family Portrait</h3>
+                <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Portrait</span>
+            </div>
+        </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="portfolio.html"
+                class="inline-block px-8 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold/10 transition">
+                View Full Portfolio →
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-black/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-cream mb-4">Client Love</h2>
+                <p class="text-gray-400">What people say about my art and classes</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 relative">
+                    <div class="text-gold text-4xl absolute top-4 right-4">"</div>
+                    <p class="text-gray-300 mb-4 italic">"Gauri captured my parents' expressions perfectly in the
+                        charcoal portrait. It was the best anniversary gift ever! Highly recommended."</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-zinc-600 rounded-full flex items-center justify-center text-cream font-bold">
+                            P
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-cream font-semibold">Priya Sharma</h4>
+                            <p class="text-xs text-gray-500">Portrait Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 relative">
+                    <div class="text-gold text-4xl absolute top-4 right-4">"</div>
+                    <p class="text-gray-300 mb-4 italic">"I joined the beginner's class knowing nothing about charcoal.
+                        In just 4 weeks, I can now sketch realistic eyes and noses. Gauri is a patient teacher."</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-zinc-600 rounded-full flex items-center justify-center text-cream font-bold">
+                            R
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-cream font-semibold">Rahul Verma</h4>
+                            <p class="text-xs text-gray-500">Art Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 relative">
+                    <div class="text-gold text-4xl absolute top-4 right-4">"</div>
+                    <p class="text-gray-300 mb-4 italic">"The attention to detail in the couple portrait was amazing.
+                        The shading and lighting were spot on. Thank you Gauri!"</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-zinc-600 rounded-full flex items-center justify-center text-cream font-bold">
+                            A
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="text-cream font-semibold">Anjali Gupta</h4>
+                            <p class="text-xs text-gray-500">Portrait Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-cream mb-4">Art by Gauri</h3>
+                    <p class="text-gray-400 text-sm">Professional charcoal artist and art teacher from Shahjahanpur,
+                        India.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="home.html" class="text-gray-400 hover:text-gold transition">Home</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-gold transition">Portfolio</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-gold transition">Services</a></li>
+                        <li><a href="classes.html" class="text-gray-400 hover:text-gold transition">Classes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">More</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-gold transition">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">Contact</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-gold transition">Book Portrait</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Connect</h4>
+                    <div class="space-y-3">
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <p class="text-gray-400 text-sm mt-4">
+                            📍 Shahjahanpur, Uttar Pradesh, India
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Art by Gauri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

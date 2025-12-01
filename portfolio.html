@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Art by Gauri</title>
+    <meta name="description"
+        content="Browse Gauri's charcoal art portfolio featuring custom portraits, couple artworks, and concept pieces.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cream: '#F5E6D3',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-zinc-900 text-gray-100">
+
+    <!-- Header (same as home.html) -->
+    <header class="bg-black/50 backdrop-blur-md fixed w-full z-50 border-b border-zinc-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="home.html" class="text-2xl font-display font-bold text-cream">Art by Gauri</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-gray-300 hover:text-gold transition">Home</a>
+                    <a href="portfolio.html" class="text-cream hover:text-gold transition">Portfolio</a>
+                    <a href="services.html" class="text-gray-300 hover:text-gold transition">Services</a>
+                    <a href="classes.html" class="text-gray-300 hover:text-gold transition">Classes</a>
+                    <a href="about.html" class="text-gray-300 hover:text-gold transition">About</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="booking.html"
+                        class="px-4 py-2 bg-gold text-black font-medium rounded-lg hover:bg-gold/90 transition">Book
+                        Portrait</a>
+                    <a href="classes.html"
+                        class="px-4 py-2 border border-cream text-cream font-medium rounded-lg hover:bg-cream/10 transition">Join
+                        a Class</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-cream">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-zinc-800">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="home.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Home</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-cream hover:bg-zinc-800 rounded">Portfolio</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Services</a>
+                <a href="classes.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Classes</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Contact</a>
+                <div class="pt-4 space-y-2">
+                    <a href="booking.html"
+                        class="block px-3 py-2 bg-gold text-black text-center font-medium rounded-lg">Book Portrait</a>
+                    <a href="classes.html"
+                        class="block px-3 py-2 border border-cream text-cream text-center font-medium rounded-lg">Join a
+                        Class</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream mb-4">Charcoal Art Portfolio</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Explore custom charcoal portraits, couple artworks, and creative concept pieces
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-8 bg-black/30 sticky top-16 z-40 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="filter-btn active px-6 py-2 bg-gold text-black font-medium rounded-lg transition"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn px-6 py-2 bg-zinc-800 text-gray-300 font-medium rounded-lg hover:bg-zinc-700 transition"
+                    data-filter="portraits">Portraits</button>
+                <button
+                    class="filter-btn px-6 py-2 bg-zinc-800 text-gray-300 font-medium rounded-lg hover:bg-zinc-700 transition"
+                    data-filter="couples">Couples</button>
+                <button
+                    class="filter-btn px-6 py-2 bg-zinc-800 text-gray-300 font-medium rounded-lg hover:bg-zinc-700 transition"
+                    data-filter="kids">Kids</button>
+                <button
+                    class="filter-btn px-6 py-2 bg-zinc-800 text-gray-300 font-medium rounded-lg hover:bg-zinc-700 transition"
+                    data-filter="concept">Concept</button>
+            </div>
+        </div>
+    </section>
+    class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300
+    cursor-pointer">
+    <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+            <span class="text-6xl">🖼️</span>
+        </div>
+        <div class="absolute top-3 right-3">
+            <span class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">Sold</span>
+        </div>
+        <div
+            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                Details</button>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="text-lg font-semibold text-cream mb-2">Anniversary Portrait</h3>
+        <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Couple</span>
+    </div>
+    </div>
+    </div>
+
+    <!-- Artwork Item 7 -->
+    <div class="artwork-item group" data-category="portraits">
+        <div
+            class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+            <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                    <span class="text-6xl">🖼️</span>
+                </div>
+                <div class="absolute top-3 right-3">
+                    <span class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                        Details</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-cream mb-2">Professional Portrait</h3>
+                <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Portrait</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artwork Item 8 -->
+    <div class="artwork-item group" data-category="kids">
+        <div
+            class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+            <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                    <span class="text-6xl">🖼️</span>
+                </div>
+                <div class="absolute top-3 right-3">
+                    <span class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                        Details</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-cream mb-2">Children Portrait</h3>
+                <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Kids</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artwork Item 9 -->
+    <div class="artwork-item group" data-category="concept">
+        <div
+            class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+            <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                    <span class="text-6xl">🖼️</span>
+                </div>
+                <div class="absolute top-3 right-3">
+                    <span class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">Sold</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                        Details</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-cream mb-2">Creative Concept</h3>
+                <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Concept</span>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-gold/20 to-cream/10 border-y border-gold/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-display font-bold text-cream mb-4">
+                Love What You See?
+            </h2>
+            <p class="text-gray-300 mb-8">
+                Commission your own custom charcoal portrait today
+            </p>
+            <a href="booking.html"
+                class="inline-block px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition transform hover:scale-105">
+                Book a Portrait
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (same as home.html) -->
+    <footer class="bg-black border-t border-zinc-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-cream mb-4">Art by Gauri</h3>
+                    <p class="text-gray-400 text-sm">Professional charcoal artist and art teacher from Shahjahanpur,
+                        India.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="home.html" class="text-gray-400 hover:text-gold transition">Home</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-gold transition">Portfolio</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-gold transition">Services</a></li>
+                        <li><a href="classes.html" class="text-gray-400 hover:text-gold transition">Classes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">More</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-gold transition">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">Contact</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-gold transition">Book Portrait</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Connect</h4>
+                    <div class="space-y-3">
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                                <path
+                                    d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <p class="text-gray-400 text-sm mt-4">
+                            📍 Shahjahanpur, Uttar Pradesh, India
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Art by Gauri. All rights reserved.</p>
+                <div class="absolute top-3 right-3">
+                    <span class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                        Details</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-cream mb-2">Abstract Concept</h3>
+                <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Concept</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Artwork Item 6 -->
+        <div class="artwork-item group" data-category="couples">
+            <div
+                class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+                <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                        <span class="text-6xl">🖼️</span>
+                    </div>
+                    <div class="absolute top-3 right-3">
+                        <span class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">Sold</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                            Details</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-cream mb-2">Anniversary Portrait</h3>
+                    <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Couple</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artwork Item 7 -->
+        <div class="artwork-item group" data-category="portraits">
+            <div
+                class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+                <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                        <span class="text-6xl">🖼️</span>
+                    </div>
+                    <div class="absolute top-3 right-3">
+                        <span
+                            class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                            Details</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-cream mb-2">Professional Portrait</h3>
+                    <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Portrait</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artwork Item 8 -->
+        <div class="artwork-item group" data-category="kids">
+            <div
+                class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+                <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                        <span class="text-6xl">🖼️</span>
+                    </div>
+                    <div class="absolute top-3 right-3">
+                        <span
+                            class="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Available</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                            Details</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-cream mb-2">Children Portrait</h3>
+                    <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Kids</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artwork Item 9 -->
+        <div class="artwork-item group" data-category="concept">
+            <div
+                class="bg-zinc-800 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
+                <div class="aspect-[3/4] bg-zinc-700 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-zinc-600 to-zinc-800 flex items-center justify-center">
+                        <span class="text-6xl">🖼️</span>
+                    </div>
+                    <div class="absolute top-3 right-3">
+                        <span class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">Sold</span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="px-6 py-2 bg-gold text-black font-semibold rounded-lg">View
+                            Details</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-cream mb-2">Creative Concept</h3>
+                    <span class="inline-block px-2 py-1 bg-gold/20 text-gold text-xs rounded">Concept</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-r from-gold/20 to-cream/10 border-y border-gold/30">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-display font-bold text-cream mb-4">
+                    Love What You See?
+                </h2>
+                <p class="text-gray-300 mb-8">
+                    Commission your own custom charcoal portrait today
+                </p>
+                <a href="booking.html"
+                    class="inline-block px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition transform hover:scale-105">
+                    Book a Portrait
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer (same as home.html) -->
+        <footer class="bg-black border-t border-zinc-800 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-display font-bold text-cream mb-4">Art by Gauri</h3>
+                        <p class="text-gray-400 text-sm">Professional charcoal artist and art teacher from Shahjahanpur,
+                            India.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-cream mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="home.html" class="text-gray-400 hover:text-gold transition">Home</a></li>
+                            <li><a href="portfolio.html" class="text-gray-400 hover:text-gold transition">Portfolio</a>
+                            </li>
+                            <li><a href="services.html" class="text-gray-400 hover:text-gold transition">Services</a>
+                            </li>
+                            <li><a href="classes.html" class="text-gray-400 hover:text-gold transition">Classes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-cream mb-4">More</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="about.html" class="text-gray-400 hover:text-gold transition">About</a></li>
+                            <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">Contact</a></li>
+                            <li><a href="booking.html" class="text-gray-400 hover:text-gold transition">Book
+                                    Portrait</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-cream mb-4">Connect</h4>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                                    <path
+                                        d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                                Instagram
+                            </a>
+                            <a href="#" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+                            <p class="text-gray-400 text-sm mt-4">
+                                📍 Shahjahanpur, Uttar Pradesh, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-zinc-800 pt-8 text-center text-gray-400 text-sm">
+                    <p>&copy; 2024 Art by Gauri. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox"
+            class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-4">
+            <button id="lightbox-close" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div
+                class="max-w-4xl w-full bg-zinc-900 rounded-xl overflow-hidden flex flex-col md:flex-row shadow-2xl border border-zinc-800">
+                <div class="md:w-1/2 bg-zinc-800 flex items-center justify-center p-8 min-h-[300px]">
+                    <span class="text-8xl">🖼️</span>
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <span id="lightbox-category"
+                            class="px-3 py-1 bg-gold/20 text-gold text-xs rounded-full font-medium">Portrait</span>
+                    </div>
+                    <h3 id="lightbox-title" class="text-3xl font-display font-bold text-cream mb-4">Artwork Title</h3>
+                    <p class="text-gray-400 mb-6">Hand-drawn charcoal portrait on high-quality acid-free paper. Captured
+                        with intricate details and shading techniques.</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex justify-between text-sm border-b border-zinc-800 pb-2">
+                            <span class="text-gray-500">Medium</span>
+                            <span class="text-gray-300">Charcoal & Graphite</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b border-zinc-800 pb-2">
+                            <span class="text-gray-500">Size</span>
+                            <span class="text-gray-300">A3 (11.7 x 16.5 in)</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b border-zinc-800 pb-2">
+                            <span class="text-gray-500">Completion Time</span>
+                            <span class="text-gray-300">12 Days</span>
+                        </div>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full py-3 bg-gold text-black text-center font-semibold rounded-lg hover:bg-gold/90 transition">
+                        Request Similar Artwork
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const artworkItems = document.querySelectorAll('.artwork-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Update active button
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-gold', 'text-black');
+                        b.classList.add('bg-zinc-800', 'text-gray-300');
+                    });
+                    btn.classList.add('active', 'bg-gold', 'text-black');
+                    btn.classList.remove('bg-zinc-800', 'text-gray-300');
+
+                    // Filter artworks
+                    artworkItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox functionality
+            const lightbox = document.getElementById('lightbox');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const viewButtons = document.querySelectorAll('.artwork-item button');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxCategory = document.getElementById('lightbox-category');
+
+            viewButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent bubbling
+                    const card = btn.closest('.artwork-item');
+                    const title = card.querySelector('h3').textContent;
+                    const category = card.querySelector('span.inline-block').textContent;
+
+                    lightboxTitle.textContent = title;
+                    lightboxCategory.textContent = category;
+
+                    lightbox.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+
+            lightboxClose.addEventListener('click', () => {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+
+            // Close on outside click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    lightbox.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+        </script>
+
+</body>
+
+</html>

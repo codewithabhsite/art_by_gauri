@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Art by Gauri</title>
+    <meta name="description"
+        content="Learn about Gauri, a passionate charcoal artist and teacher from Shahjahanpur, India.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cream: '#F5E6D3',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-zinc-900 text-gray-100">
+
+    <!-- Header -->
+    <header class="bg-black/50 backdrop-blur-md fixed w-full z-50 border-b border-zinc-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="home.html" class="text-2xl font-display font-bold text-cream">Art by Gauri</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-gray-300 hover:text-gold transition">Home</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-gold transition">Portfolio</a>
+                    <a href="services.html" class="text-gray-300 hover:text-gold transition">Services</a>
+                    <a href="classes.html" class="text-gray-300 hover:text-gold transition">Classes</a>
+                    <a href="about.html" class="text-cream hover:text-gold transition">About</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-gold transition">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="booking.html"
+                        class="px-4 py-2 bg-gold text-black font-medium rounded-lg hover:bg-gold/90 transition">Book
+                        Portrait</a>
+                    <a href="classes.html"
+                        class="px-4 py-2 border border-cream text-cream font-medium rounded-lg hover:bg-cream/10 transition">Join
+                        a Class</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-cream">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-zinc-800">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="home.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Home</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Portfolio</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Services</a>
+                <a href="classes.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Classes</a>
+                <a href="about.html" class="block px-3 py-2 text-cream hover:bg-zinc-800 rounded">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:bg-zinc-800 rounded">Contact</a>
+                <div class="pt-4 space-y-2">
+                    <a href="booking.html"
+                        class="block px-3 py-2 bg-gold text-black text-center font-medium rounded-lg">Book Portrait</a>
+                    <a href="classes.html"
+                        class="block px-3 py-2 border border-cream text-cream text-center font-medium rounded-lg">Join a
+                        Class</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream mb-4">About Gauri</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                A passionate charcoal artist dedicated to creating beautiful portraits and teaching the art of charcoal
+                drawing
+            </p>
+        </div>
+    </section>
+
+    <!-- Gauri's Story -->
+    <section class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Photo -->
+                <div class="order-2 lg:order-1">
+                    <div
+                        class="aspect-square bg-gradient-to-br from-zinc-700 to-zinc-800 rounded-2xl flex items-center justify-center border-2 border-gold/30">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4">👩‍🎨</div>
+                            <p class="text-cream font-display text-2xl">Gauri</p>
+                            <p class="text-gray-400">Charcoal Artist & Teacher</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Text -->
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-display font-bold text-cream mb-6">My Journey</h2>
+
+                    <div class="space-y-4 text-gray-300">
+                        <p>
+                            Hi, I'm Gauri, a BCA student at S.S. College in Shahjahanpur, Uttar Pradesh. While pursuing
+                            my degree in computer applications, I discovered my true passion – charcoal art.
+                        </p>
+
+                        <p>
+                            What started as a hobby during college breaks has transformed into a fulfilling journey of
+                            over 2 years. I fell in love with the depth, texture, and emotion that charcoal brings to
+                            portraits. There's something magical about transforming a blank sheet into a lifelike
+                            portrait using just charcoal and paper.
+                        </p>
+
+                        <p>
+                            Today, I create custom charcoal portraits for clients across India, capturing precious
+                            moments and memories in timeless artwork. Each portrait is crafted with patience, attention
+                            to detail, and a deep commitment to bringing out the essence of the subject.
+                        </p>
+
+                        <p>
+                            Beyond creating art, I'm passionate about teaching. I believe everyone has an artist within
+                            them, and I love helping students discover and develop their charcoal drawing skills.
+                            Whether you're a complete beginner or looking to refine your techniques, I'm here to guide
+                            you with personalized attention and encouragement.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-black/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-cream mb-12 text-center">My Artistic Journey</h2>
+
+            <div class="space-y-8">
+
+                <!-- Timeline Item 1 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2022</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1 pb-8">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">Discovered Charcoal Art</h3>
+                            <p class="text-gray-400">Started experimenting with charcoal during college, instantly fell
+                                in love with the medium</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2022</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1 pb-8">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">First Portrait Commission</h3>
+                            <p class="text-gray-400">Completed my first paid portrait for a friend's family – a
+                                milestone moment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2023</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1 pb-8">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">Started Teaching Students</h3>
+                            <p class="text-gray-400">Began conducting charcoal art classes for beginners in Shahjahanpur
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2023</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1 pb-8">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">50+ Custom Portraits</h3>
+                            <p class="text-gray-400">Reached the milestone of completing 50+ custom charcoal portraits
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2024</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1 pb-8">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">Launched Online Classes</h3>
+                            <p class="text-gray-400">Expanded teaching to online platform, reaching students across
+                                India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-24 text-right">
+                        <span class="text-2xl font-bold text-gold">2024</span>
+                    </div>
+                    <div class="flex-shrink-0 w-px bg-gold"></div>
+                    <div class="flex-1">
+                        <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                            <h3 class="text-xl font-semibold text-cream mb-2">Growing Community</h3>
+                            <p class="text-gray-400">Built a community of 100+ students and countless happy clients</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-cream mb-12 text-center">My Values</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Value 1 -->
+                <div class="text-center p-6 bg-zinc-800 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Patience</h3>
+                    <p class="text-gray-400 text-sm">Every stroke matters. I take time to perfect each detail</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="text-center p-6 bg-zinc-800 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Attention to Detail</h3>
+                    <p class="text-gray-400 text-sm">Capturing the essence and emotion in every portrait</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="text-center p-6 bg-zinc-800 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Personalized Approach</h3>
+                    <p class="text-gray-400 text-sm">Every student and client receives individual attention</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="text-center p-6 bg-zinc-800 rounded-xl border border-zinc-700 hover:border-gold transition">
+                    <div class="text-4xl mb-4">💎</div>
+                    <h3 class="text-xl font-semibold text-cream mb-2">Quality Over Quantity</h3>
+                    <p class="text-gray-400 text-sm">I focus on creating exceptional work, not rushing through projects
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Skills -->
+    <section class="py-20 bg-black/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Education -->
+                <div class="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
+                    <h3 class="text-2xl font-semibold text-cream mb-6">Education</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream">BCA (Bachelor of Computer Applications)</h4>
+                                <p class="text-gray-400 text-sm">S.S. College, Shahjahanpur</p>
+                                <p class="text-gray-500 text-xs">Currently Pursuing</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎨</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream">Self-Taught Charcoal Artist</h4>
+                                <p class="text-gray-400 text-sm">2+ years of dedicated practice</p>
+                                <p class="text-gray-500 text-xs">Continuous learning and improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
+                    <h3 class="text-2xl font-semibold text-cream mb-6">Skills & Expertise</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Portrait Realism</span>
+                            <div class="flex gap-1">
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Shading & Blending</span>
+                            <div class="flex gap-1">
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Hair & Texture</span>
+                            <div class="flex gap-1">
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gray-600">⭐</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Teaching & Mentoring</span>
+                            <div class="flex gap-1">
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-300">Concept Art</span>
+                            <div class="flex gap-1">
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gold">⭐</span>
+                                <span class="text-gray-600">⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-gold/20 to-cream/10 border-y border-gold/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-display font-bold text-cream mb-4">
+                Let's Create Something Beautiful Together
+            </h2>
+            <p class="text-gray-300 mb-8">
+                Whether you want a custom portrait or to learn charcoal art, I'm here to help
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html"
+                    class="px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition transform hover:scale-105">
+                    Book a Portrait
+                </a>
+                <a href="classes.html"
+                    class="px-8 py-3 border-2 border-cream text-cream font-semibold rounded-lg hover:bg-cream/10 transition">
+                    Join a Class
+                </a>
+                <a href="contact.html"
+                    class="px-8 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold/10 transition">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-cream mb-4">Art by Gauri</h3>
+                    <p class="text-gray-400 text-sm">Professional charcoal artist and art teacher from Shahjahanpur,
+                        India.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="home.html" class="text-gray-400 hover:text-gold transition">Home</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-gold transition">Portfolio</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-gold transition">Services</a></li>
+                        <li><a href="classes.html" class="text-gray-400 hover:text-gold transition">Classes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">More</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-gold transition">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-gold transition">Contact</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-gold transition">Book Portrait</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-cream mb-4">Connect</h4>
+                    <div class="space-y-3">
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                                <path
+                                    d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://www.instagram.com/_official_gauri__36?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="flex items-center text-gray-400 hover:text-gold transition text-sm">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <p class="text-gray-400 text-sm mt-4">
+                            📍 Shahjahanpur, Uttar Pradesh, India
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Art by Gauri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

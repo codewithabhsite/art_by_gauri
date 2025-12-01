@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art by Gauri - Professional Charcoal Artist</title>
+    <meta http-equiv="refresh" content="0; url=home.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script>
+        // Immediate redirect
+        window.location.href = "home.html";
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #212529;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .loader-container {
+            text-align: center;
+            background: white;
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #f1f3f5;
+            border-top: 4px solid #D4AF37;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            color: #495057;
+            font-size: 15px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .fallback-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #D4AF37;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        }
+
+        .fallback-link:hover {
+            background: #c29d2f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+        }
+
+        .subtitle {
+            color: #868e96;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        /* Decorative elements */
+        .decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .decoration-1 {
+            background: #D4AF37;
+            top: 10%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .decoration-2 {
+            background: #D4AF37;
+            bottom: 10%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .loader-container {
+                padding: 40px 30px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+
+    <div class="loader-container">
+        <h1 class="logo">Art by Gauri</h1>
+        <p class="tagline">Professional Charcoal Artist & Teacher</p>
+
+        <div class="spinner"></div>
+
+        <p class="loading-text">Loading your experience...</p>
+
+        <a href="home.html" class="fallback-link">Enter Website</a>
+
+        <p class="subtitle">Capturing emotions, preserving memories</p>
+    </div>
+</body>
+
+</html>
